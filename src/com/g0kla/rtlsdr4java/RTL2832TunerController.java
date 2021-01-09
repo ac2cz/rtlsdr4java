@@ -171,12 +171,12 @@ public abstract class RTL2832TunerController {
 
 			if( eeprom == null )
 			{
-				throw new DeviceException( "eeprom byte array was null - constructed: empty descriptor object" );
+				System.out.println( "eeprom byte array was null - constructed: empty descriptor object" );
 			}
 		}
 		catch( Exception e )
 		{
-			throw new DeviceException( "error while constructing device descriptor using "
+			System.out.println( "error while constructing device descriptor using "
 				+ "descriptor byte array " + 
 				( eeprom == null ? "[null]" : Arrays.toString( eeprom )) + e.getMessage() );
 		}
